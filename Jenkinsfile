@@ -1,5 +1,5 @@
 node {
     stage('Clone') {
-        git "https://github.com/psaidani/IssouLaChancla"
+        git "https://github.com/psaidani/GoSecuri"
     }
 }
