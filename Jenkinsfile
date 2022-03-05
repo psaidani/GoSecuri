@@ -1,9 +1,8 @@
 node {
-    stage('Git') {
+    stage('Cloner') {
         git branch: 'main', url: 'https://github.com/psaidani/GoSecuri.git'
     }
-    stage('Read') {
+    stage('Lire liste fichiers') {
         bat 'dir'
     }
 }
-Issou
