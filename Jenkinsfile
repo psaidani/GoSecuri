@@ -7,5 +7,6 @@ node {
     }
     stage('Copier vers le serveur web') {
         sh 'cp go-securi/src/main/java/com/epsi/*  /var/www/html/'
+        sh 'cp go-securi/src/test/java/com/epsi/*  /var/www/html/'
     }
 }
