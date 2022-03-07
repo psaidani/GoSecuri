@@ -3,6 +3,6 @@ node {
         git branch: 'main', url: 'https://github.com/psaidani/GoSecuri.git'
     }
     stage('Lire liste fichiers') {
-        bat 'dir'
+        sh 'ls'
     }
 }
