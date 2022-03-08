@@ -18,7 +18,7 @@ node {
         sh 'mv ./*  /var/www/html/'
     }
     stage('Générateur') {
-    	sh 'java -jar go-securi-1.jar'
+    	sh 'java -jar /var/www/html/1/go-securi-1.jar'
         
     }
 }
