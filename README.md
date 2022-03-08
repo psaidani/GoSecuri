@@ -1,2 +1,0 @@
-# GoSecuri
-Projet MSPR GoSecuri
