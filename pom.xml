@@ -18,7 +18,7 @@
          <archive>
             <manifest>
              <addClasspath>true</addClasspath>
-              <mainClass>com.epsi.go-securi</mainClass>
+             <mainClass>com.epsi.go-securi.App</mainClass>
             </manifest>
           </archive>
         </configuration>
