@@ -83,7 +83,7 @@
 
     </repository>
 
-</repositories>
+  </repositories>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>11</maven.compiler.source>
@@ -95,26 +95,26 @@
       <groupId>com.aspose</groupId>
       <artifactId>aspose-cells</artifactId>
       <version>21.10</version>
-  </dependency>
+    </dependency>
 
-  <dependency>
+    <dependency>
       <groupId>com.aspose</groupId>
       <artifactId>aspose-cells</artifactId>
       <version>21.10</version>
       <classifier>javadoc</classifier>
-  </dependency>
+    </dependency>
 
-  <dependency>
+    <dependency>
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcprov-jdk15on</artifactId>
       <version>1.69</version>
-  </dependency>        
+    </dependency>        
 
-  <dependency>
+    <dependency>
       <groupId>org.bouncycastle</groupId>
       <artifactId>bcpkix-jdk15on</artifactId>
       <version>1.60</version>
-  </dependency> 
+    </dependency> 
 
     <dependency>
       <groupId>io.lsn</groupId>
