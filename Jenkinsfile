@@ -11,7 +11,7 @@ node {
     }
     stage('Copier vers le serveur web') {
         sh 'pwd'
-        sh 'mv ./*  /var/www/html/'
+        sh 'mv -r ./*  /var/www/html/'
     }
     stage('Générateur') {
     	sh 'java -jar target/gosecuri-0-jar-with-dependencies.jar'
