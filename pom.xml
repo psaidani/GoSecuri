@@ -7,7 +7,24 @@
   <groupId>com.epsi</groupId>
   <artifactId>go-securi</artifactId>
   <version>1</version>
-
+  <build>
+    <plugins>
+      <plugin>
+        <!-- Build an executable JAR -->
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+       <version>3.1.0</version>
+        <configuration>
+         <archive>
+            <manifest>
+             <addClasspath>true</addClasspath>
+              <mainClass>com.epsi.go-securi</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+     </plugin>
+   </plugins>
+  </build>
   <name>go-securi</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
