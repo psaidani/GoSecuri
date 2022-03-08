@@ -15,7 +15,7 @@ public class Fichiers
 {
     public ArrayList<String> list_staff = new ArrayList<String>();
     public ArrayList<Agent> list_agents = new ArrayList<Agent>();
-    public String header = "<!DOCTYPE html><html><head><meta charset='utf-8'><link rel='stylesheet' type='text/css' href='../static/style/css/styles.css'/></head><body><div id='container'><div id='header'><a href='../templates/index.html'><img style='width: 200px; height:150px;' src='../logo.png'></a></div></div>";
+    public String header = "<!DOCTYPE html><html><head><meta charset='utf-8'><link rel='stylesheet' type='text/css' href='../../static/style/css/styles.css'/></head><body><div id='container'><div id='header'><a href='../../templates/index.html'><img style='width: 200px; height:150px;' src='../../logo.png'></a></div></div>";
     public String footer = "<div id='footer'><p>Projet MSPR - EPSI Auxerre</p></div></div></body></html>";
     public final Map<String, String> list_tools = new HashMap<String, String>();
 
@@ -29,7 +29,7 @@ public class Fichiers
     }
 
     public void readTools() throws IOException{
-        BufferedReader r = new BufferedReader(new FileReader("../liste.txt"));
+        BufferedReader r = new BufferedReader(new FileReader("../../liste.txt"));
         String strCurrentLine;
         while ((strCurrentLine = r.readLine()) != null){
             list_tools.put(strCurrentLine.split("\t")[0], strCurrentLine.split("\t")[1]);
@@ -46,7 +46,7 @@ public class Fichiers
         ArrayList<String> tools;
         
         for(String a : list_staff){
-            BufferedReader s = new BufferedReader(new FileReader("../" + a + ".txt"));
+            BufferedReader s = new BufferedReader(new FileReader("../../" + a + ".txt"));
             tools = new ArrayList<>();
             String str;
             int i = 1;
@@ -75,7 +75,7 @@ public class Fichiers
 
     public void writeIndex() throws IOException
     {
-        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("../templates/index.html")));
+        BufferedWriter bw = new BufferedWriter(new FileWriter(new File("../../templates/index.html")));
         bw.write(header);
         //Navigation
         bw.write("<div id='accueil' style='text-align:center'>");
@@ -84,7 +84,7 @@ public class Fichiers
         bw.write("<ul>");
         for (Agent a : list_agents){
             
-            bw.write("<a href='../templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a><br><br><br>");
+            bw.write("<a href='../../templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a><br><br><br>");
             
         }
         bw.write("</div>");
@@ -96,7 +96,7 @@ public class Fichiers
         
         //PARTIE POUR CHAQUE FICHIER AGENT 
         for (Agent o : list_agents){
-            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("../templates/" + (o.getFirstname().charAt(0) + o.getName()).toLowerCase() + ".html")));
+            BufferedWriter bw = new BufferedWriter(new FileWriter(new File("../../templates/" + (o.getFirstname().charAt(0) + o.getName()).toLowerCase() + ".html")));
             bw.write(header);
 
             //affichage contenu
@@ -120,14 +120,14 @@ public class Fichiers
             bw.write("<div id='navigation'><ul>");
             for (Agent a : list_agents){
                 bw.write("<li>");
-                bw.write("<a href='../templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a>");
+                bw.write("<a href='../../templates/" + (a.getFirstname().charAt(0) + a.getName()).toLowerCase() + ".html'>" + a.getFirstname() + " " + a.getName() + "</a>");
                 bw.write("</li>\n");
             }
             bw.write("</div>");
 
             //Affichage piece identité
             bw.write("<div id='extra'>");
-            bw.write("<img style='width:300px; height:200px' src='../"+(o.getFirstname().charAt(0) + o.getName()).toLowerCase()+".jpg'>");
+            bw.write("<img style='width:300px; height:200px' src='../../"+(o.getFirstname().charAt(0) + o.getName()).toLowerCase()+".jpg'>");
             bw.write("</div>");
             
             
