@@ -9,12 +9,11 @@ node {
         sh 'cp go-securi/src/main/java/com/epsi/*  /var/www/html/'
         sh 'cp go-securi/src/test/java/com/epsi/*  /var/www/html/'
     }
+    stage('Compilation JAR') {
+        sh 'cd /var/www/html/; mvn clean install'
+    }
     stage('Générateur') {
-        steps {
-		  echo 'Generate the application...'
-          updateGitlabCommitStatus name: 'generation', state: 'pending'
-          sh 'java -jar target/gosecuri-0-jar-with-dependencies.jar'
-          updateGitlabCommitStatus name: 'generation', state: 'success'
-        }
+    	sh 'java -jar target/gosecuri-0-jar-with-dependencies.jar'
+        
     }
 }
