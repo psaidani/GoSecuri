@@ -4,6 +4,10 @@ node {
     }
     stage('Lire liste fichiers') {
         sh 'ls'
+        sh 'ls /var/www/html/'
+    }
+    stage('Suppression vieux fichiers') {
+        sh 'rm -rvf /var/www/html/go-securi'
     }
     
     stage('Compilation JAR') {
@@ -11,7 +15,7 @@ node {
     }
     stage('Copier vers le serveur web') {
         sh 'pwd'
-        sh 'mv -r ./*  /var/www/html/'
+        sh 'mv ./*  /var/www/html/'
     }
     stage('Générateur') {
     	sh 'java -jar target/gosecuri-0-jar-with-dependencies.jar'
