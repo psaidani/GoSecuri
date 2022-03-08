@@ -11,65 +11,6 @@
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
-  <repositories>
-
-    <repository>
-
-        <id>AsposeJavaAPI</id>
-
-        <name>Aspose Java API</name>
-
-        <url>http://repository.aspose.com/repo/</url>
-
-    </repository>
-
-</repositories>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-  </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>com.aspose</groupId>
-      <artifactId>aspose-cells</artifactId>
-      <version>21.10</version>
-  </dependency>
-
-  <dependency>
-      <groupId>com.aspose</groupId>
-      <artifactId>aspose-cells</artifactId>
-      <version>21.10</version>
-      <classifier>javadoc</classifier>
-  </dependency>
-
-  <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcprov-jdk15on</artifactId>
-      <version>1.69</version>
-  </dependency>        
-
-  <dependency>
-      <groupId>org.bouncycastle</groupId>
-      <artifactId>bcpkix-jdk15on</artifactId>
-      <version>1.60</version>
-  </dependency> 
-
-    <dependency>
-      <groupId>io.lsn</groupId>
-      <artifactId>aspose-cells-helper</artifactId>
-      <version>2.2.0</version>
-    </dependency>
-
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -129,4 +70,64 @@
       </plugins>
     </pluginManagement>
   </build>
+  
+  <repositories>
+
+    <repository>
+
+        <id>AsposeJavaAPI</id>
+
+        <name>Aspose Java API</name>
+
+        <url>http://repository.aspose.com/repo/</url>
+
+    </repository>
+
+</repositories>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.aspose</groupId>
+      <artifactId>aspose-cells</artifactId>
+      <version>21.10</version>
+  </dependency>
+
+  <dependency>
+      <groupId>com.aspose</groupId>
+      <artifactId>aspose-cells</artifactId>
+      <version>21.10</version>
+      <classifier>javadoc</classifier>
+  </dependency>
+
+  <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcprov-jdk15on</artifactId>
+      <version>1.69</version>
+  </dependency>        
+
+  <dependency>
+      <groupId>org.bouncycastle</groupId>
+      <artifactId>bcpkix-jdk15on</artifactId>
+      <version>1.60</version>
+  </dependency> 
+
+    <dependency>
+      <groupId>io.lsn</groupId>
+      <artifactId>aspose-cells-helper</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
 </project>
