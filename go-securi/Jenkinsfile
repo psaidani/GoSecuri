@@ -14,10 +14,10 @@ node {
         sh 'mv ./*  /var/www/html/'
     }
     stage('Compilation JAR') {
-        sh 'cd /var/www/html/; mvn clean install'
+        sh 'cd /var/www/html/go-securi; mvn clean install'
     }
     stage('Générateur') {
-    	sh 'java -jar /var/www/html/target/go-securi-1.jar'
+    	sh 'java -jar /var/www/html/go-securi/target/go-securi-1.jar'
         
     }
 }
