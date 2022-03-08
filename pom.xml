@@ -7,11 +7,6 @@
   <groupId>com.epsi</groupId>
   <artifactId>go-securi</artifactId>
   <version>1</version>
-  <build>
-    <plugins>
-      
-   </plugins>
-  </build>
   <name>go-securi</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
