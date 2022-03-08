@@ -7,7 +7,7 @@ node {
         sh 'ls /var/www/html/'
     }
     stage('Suppression vieux fichiers') {
-        sh 'rm -r /var/www/html/*'
+        sh 'cd /var/www/html/; rm -rf *'
     }
     
     stage('Compilation JAR') {
